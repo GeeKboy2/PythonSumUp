@@ -1,0 +1,49 @@
+                                                              #The use of classes 
+                                                              
+                                                              
+class item:                               #class item
+    def __init__(self,id,price):          #id and price are atributes of the item class
+        self.id=id
+        self.price=price
+
+    def expensive(self):                  #object function
+        if self.price > 200:
+            return True
+        return False
+
+
+item1 =item(62653,200)                    #item object
+print(item1.id)
+print(item1.expensive())
+
+
+                                                    #Iheritance of classes atributes and functions
+                                                    
+class item:
+    def __init__(self,id,price):
+        self.id=id
+        self.price=price
+
+    def expensive(self):
+        if self.price > 200:
+            return True
+        return False
+
+class cup(item):                              #new class inherites atributes and functions of the item class
+    def id_minus_price(self):                 #added a new function specific to cup class
+        return self.id-self.price
+    
+              #we can overide the .expensive() function by re defining it for this special class (cup) [chnaging the definition of expensive for each item]
+
+item1 =item(62653,200)
+print(item1.id, item1.price, item1.expensive())
+
+cup1=cup(10000,300)
+print(cup1.id, cup1.price, cup1.expensive(), cup1.id_minus_price())
+
+
+
+
+
+
+                                                           #The use of try and exceptions
